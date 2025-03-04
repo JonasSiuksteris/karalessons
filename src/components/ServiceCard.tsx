@@ -143,7 +143,7 @@ const ServiceCard = ({
             ))}
           </div>
           
-          <p className="text-gray-600 mb-4">{description}</p>
+          <p className="text-gray-600 mb-6 text-lg">{description}</p>
           
           <ul className="mb-4 text-gray-600 space-y-2">
             {bulletPoints.map((point, index) => (

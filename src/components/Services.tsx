@@ -60,7 +60,7 @@ const services = [
     title: "Character Design Course",
     description: (
       <>
-        Dive into the world of character design and learn how to <strong>create expressive, unforgettable characters</strong>. This course covers <strong>composition, stylization, and essential design principles</strong> to help you bring your ideas to life. Perfect for beginners and intermediate artists!
+        Dive into the world of character design and learn how to create expressive, unforgettable characters. This course covers <strong>composition, stylization, and essential design principles</strong> to help you bring your ideas to life. Perfect for beginners and intermediate artists!
       </>
     ),
     bulletPoints: [
