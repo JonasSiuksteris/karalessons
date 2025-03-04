@@ -19,7 +19,7 @@ const Hero = () => {
             <div className="flex flex-row items-center p-4 gap-4">
               <div className="w-20 h-20 sm:w-36 sm:h-36 flex-shrink-0">
                 <img 
-                  src="https://picsum.photos/seed/consultation/800/600" 
+                  src="src\img\FreeConsultation.jpg" 
                   alt="Art consultation" 
                   className="w-full h-full object-cover rounded-lg"
                 />

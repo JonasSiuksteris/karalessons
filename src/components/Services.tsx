@@ -1,12 +1,30 @@
 import ServiceCard from './ServiceCard'
 
+// Import all images
+import gesture1 from '../img/Gesture/Gesture1.jpg'
+import gesture2 from '../img/Gesture/Gesture2.jpg'
+import gesture3 from '../img/Gesture/Gesture3.jpg'
+import gesture4 from '../img/Gesture/Gesture4.jpg'
+import anatomy1 from '../img/Anatomy/Anatomy1.jpg'
+import anatomy2 from '../img/Anatomy/Anatomy2.jpg'
+import anatomy3 from '../img/Anatomy/Anatomy3.jpg'
+import anatomy4 from '../img/Anatomy/Anatomy4.jpg'
+import conecptart1 from '../img/ConceptArt/ConceptArt1.jpg'
+import conecptart2 from '../img/ConceptArt/ConceptArt2.jpg'
+import conecptart3 from '../img/ConceptArt/ConceptArt3.jpg'
+import conecptart4 from '../img/ConceptArt/ConceptArt4.jpg'
+
 const services = [
   {
     id: 1,
     title: "Gesture Drawing Course",
-    description: "In this course, you'll learn three powerful methods to break down even the most challenging poses with ease. Whether you're a beginner or an intermediate artist, my tailored approach will help you level up fast.",
+    description: (
+      <>
+        In this course, you'll learn <strong>three powerful methods</strong> to break down even the most challenging poses with ease. Whether you're a beginner or an intermediate artist, my tailored approach will help you level up fast.
+      </>
+    ),
     bulletPoints: [
-      "Learn three powerful methods to break down even the most difficult poses",
+      <>Learn <strong>three powerful methods</strong> to break down even the most difficult poses</>,
       "Draw figures that feel natural and full of energy",
       "Boost your skills with personalized, one-on-one guidance"
     ],
@@ -15,11 +33,7 @@ const services = [
     languages: ["English/Russian"],
     meetingType: ["In Person/Zoom"],
     formUrl: "https://forms.google.com/gesture-drawing-form",
-    gallery: [
-      "https://picsum.photos/seed/gesture1/800/600",
-      "https://picsum.photos/seed/gesture2/800/600",
-      "https://picsum.photos/seed/gesture3/800/600"
-    ]
+    gallery: [gesture1, gesture2, gesture3, gesture4]
   },
   {
     id: 2,
@@ -35,11 +49,7 @@ const services = [
     languages: ["English/Russian"],
     meetingType: ["In Person/Zoom"],
     formUrl: "https://forms.google.com/anatomy-form",
-    gallery: [
-      "https://picsum.photos/seed/anatomy1/800/600",
-      "https://picsum.photos/seed/anatomy2/800/600",
-      "https://picsum.photos/seed/anatomy3/800/600"
-    ]
+    gallery: [anatomy1, anatomy2, anatomy3, anatomy4]
   },
   {
     id: 3,
@@ -55,11 +65,7 @@ const services = [
     languages: ["English/Russian"],
     meetingType: ["In Person/Zoom"],
     formUrl: "https://forms.google.com/character-design-form",
-    gallery: [
-      "https://picsum.photos/seed/character1/800/600",
-      "https://picsum.photos/seed/character2/800/600",
-      "https://picsum.photos/seed/character3/800/600"
-    ]
+    gallery: [conecptart1, conecptart2, conecptart3, conecptart4]
   }
 ]
 

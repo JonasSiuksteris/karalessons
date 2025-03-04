@@ -1,10 +1,10 @@
-import { useState } from 'react'
+import { useState, ReactNode } from 'react'
 import { ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react'
 
 interface ServiceCardProps {
   title: string
-  description: string
-  bulletPoints: string[]
+  description: ReactNode
+  bulletPoints: ReactNode[]
   price: number
   skillLevel: string
   languages: string[]
@@ -84,7 +84,7 @@ const ServiceCard = ({
         
         <ul className="list-disc pl-5 mb-4 text-gray-600">
           {bulletPoints.map((point, index) => (
-            <li key={index} className="mb-1">{point}</li>
+            <li key={index}>{point}</li>
           ))}
         </ul>
         
