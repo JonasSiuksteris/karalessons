@@ -4,13 +4,26 @@ import { ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react'
 interface ServiceCardProps {
   title: string
   description: string
+  bulletPoints: string[]
   price: number
   skillLevel: string
+  languages: string[]
+  meetingType: string[]
   formUrl: string
   gallery: string[]
 }
 
-const ServiceCard = ({ title, description, price, skillLevel, formUrl, gallery }: ServiceCardProps) => {
+const ServiceCard = ({ 
+  title, 
+  description, 
+  bulletPoints, 
+  price, 
+  skillLevel, 
+  languages, 
+  meetingType, 
+  formUrl, 
+  gallery 
+}: ServiceCardProps) => {
   const [currentImage, setCurrentImage] = useState(0)
 
   const nextImage = () => {
@@ -48,17 +61,35 @@ const ServiceCard = ({ title, description, price, skillLevel, formUrl, gallery }
       </div>
       
       <div className="p-6">
-        <div className="flex justify-between items-start mb-4">
-          <h3 className="text-xl font-semibold">{title}</h3>
+        <div className="flex flex-wrap gap-2 mb-4">
+          <h3 className="text-xl font-semibold w-full">{title}</h3>
           <span className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded">
             {skillLevel}
           </span>
+          
+          {languages.map((language, index) => (
+            <span key={index} className="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded">
+              {language}
+            </span>
+          ))}
+          
+          {meetingType.map((type, index) => (
+            <span key={index} className="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded">
+              {type}
+            </span>
+          ))}
         </div>
         
         <p className="text-gray-600 mb-4">{description}</p>
         
+        <ul className="list-disc pl-5 mb-4 text-gray-600">
+          {bulletPoints.map((point, index) => (
+            <li key={index} className="mb-1">{point}</li>
+          ))}
+        </ul>
+        
         <div className="flex justify-between items-center">
-          <span className="text-2xl font-bold">${price}</span>
+          <span className="text-2xl font-bold">{price} €</span>
           <button
             onClick={handleBookNow}
             className="bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-blue-700 transition-colors"

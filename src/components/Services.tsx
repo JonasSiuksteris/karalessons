@@ -3,41 +3,62 @@ import ServiceCard from './ServiceCard'
 const services = [
   {
     id: 1,
-    title: "Fundamentals of Drawing",
-    description: "Master the basics of drawing including perspective, shading, and composition. Perfect for beginners wanting to build a strong foundation.",
-    price: 299,
-    skillLevel: "Beginner",
-    formUrl: "https://forms.google.com/fundamentals-form",
+    title: "Gesture Drawing Course",
+    description: "In this course, you'll learn three powerful methods to break down even the most challenging poses with ease. Whether you're a beginner or an intermediate artist, my tailored approach will help you level up fast.",
+    bulletPoints: [
+      "Learn three powerful methods to break down even the most difficult poses",
+      "Draw figures that feel natural and full of energy",
+      "Boost your skills with personalized, one-on-one guidance"
+    ],
+    price: 30,
+    skillLevel: "Beginner/Intermediate",
+    languages: ["English/Russian"],
+    meetingType: ["In Person/Zoom"],
+    formUrl: "https://forms.google.com/gesture-drawing-form",
     gallery: [
-      "https://picsum.photos/seed/art1/800/600",
-      "https://picsum.photos/seed/art2/800/600",
-      "https://picsum.photos/seed/art3/800/600"
+      "https://picsum.photos/seed/gesture1/800/600",
+      "https://picsum.photos/seed/gesture2/800/600",
+      "https://picsum.photos/seed/gesture3/800/600"
     ]
   },
   {
     id: 2,
-    title: "Figure Drawing Mastery",
-    description: "Deep dive into human anatomy, gesture drawing, and figure composition. Ideal for artists ready to tackle the complexity of the human form.",
-    price: 399,
-    skillLevel: "Intermediate",
-    formUrl: "https://forms.google.com/figure-drawing-form",
+    title: "Anatomy For Artist",
+    description: "Learn the fundamentals of anatomy, from construction techniques and proportions to sculpting the body with precision. Discover how to break down complex shapes, capture natural poses, and tweak anatomy to fit your unique art style.",
+    bulletPoints: [
+      "Sculpt and stylize anatomy to fit your unique art style",
+      "Nail proportions and structure with ease",
+      "Break down complex shapes for more fluid poses"
+    ],
+    price: 30,
+    skillLevel: "Beginner/Intermediate",
+    languages: ["English/Russian"],
+    meetingType: ["In Person/Zoom"],
+    formUrl: "https://forms.google.com/anatomy-form",
     gallery: [
-      "https://picsum.photos/seed/figure1/800/600",
-      "https://picsum.photos/seed/figure2/800/600",
-      "https://picsum.photos/seed/figure3/800/600"
+      "https://picsum.photos/seed/anatomy1/800/600",
+      "https://picsum.photos/seed/anatomy2/800/600",
+      "https://picsum.photos/seed/anatomy3/800/600"
     ]
   },
   {
     id: 3,
-    title: "Digital Art & Illustration",
-    description: "Learn professional digital art techniques, from concept art to character design. Perfect for artists transitioning to digital medium.",
-    price: 449,
-    skillLevel: "Advanced",
-    formUrl: "https://forms.google.com/digital-art-form",
+    title: "Character Design Course",
+    description: "Dive into the world of character design and learn how to create expressive, unforgettable characters. This course covers composition, stylization, and essential design principles to help you bring your ideas to life. Perfect for beginners and intermediate artists!",
+    bulletPoints: [
+      "Master visual storytelling and bring your ideas to life",
+      "Design compelling characters, environments, and props with confidence",
+      "Develop a unique artistic voice through personalized, one-on-one guidance"
+    ],
+    price: 30,
+    skillLevel: "Beginner/Intermediate",
+    languages: ["English/Russian"],
+    meetingType: ["In Person/Zoom"],
+    formUrl: "https://forms.google.com/character-design-form",
     gallery: [
-      "https://picsum.photos/seed/digital1/800/600",
-      "https://picsum.photos/seed/digital2/800/600",
-      "https://picsum.photos/seed/digital3/800/600"
+      "https://picsum.photos/seed/character1/800/600",
+      "https://picsum.photos/seed/character2/800/600",
+      "https://picsum.photos/seed/character3/800/600"
     ]
   }
 ]

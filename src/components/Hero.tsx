@@ -10,10 +10,10 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="text-center">
           <h1 className="text-5xl font-bold text-gray-900 mb-4">
-            Master the Art of Drawing
+            KARA LESSONS
           </h1>
           <p className="text-xl text-gray-600 mb-6 max-w-2xl mx-auto">
-            Transform your artistic journey with personalized tutoring from experienced professionals.
+            Transform your artistic journey with personalized tutoring.
           </p>
           <div className="bg-white rounded-lg shadow-sm max-w-4xl mx-auto overflow-hidden">
             <div className="flex flex-row items-center p-4 gap-4">
@@ -27,7 +27,7 @@ const Hero = () => {
               <div className="flex-1">
                 <h2 className="text-lg sm:text-xl font-semibold mb-2 text-left">Free Consultation Session</h2>
                 <p className="text-sm sm:text-base text-gray-600 mb-3 text-left">
-                  Book a 20-minute feedback session (online or in-person) to discuss your goals and get personalized advice.
+                  Book a 15-minute online feedback session to discuss your goals and get personalized advice.
                 </p>
                 <button
                   onClick={handleConsultation}
