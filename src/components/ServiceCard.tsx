@@ -25,7 +25,7 @@ const ServiceCard = ({
   gallery 
 }: ServiceCardProps) => {
   const [currentImage, setCurrentImage] = useState(0)
-  const [loadedImages, setLoadedImages] = useState<string[]>([])
+  const [, setLoadedImages] = useState<string[]>([])
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
