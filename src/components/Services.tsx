@@ -20,11 +20,11 @@ const services = [
     title: "Gesture Drawing Course",
     description: (
       <>
-        In this course, you'll learn <strong>three powerful methods</strong> to break down even the most challenging poses with ease. Whether you're a beginner or an intermediate artist, my tailored approach will help you level up fast.
+        In this course, you'll learn <strong>three powerful methods</strong> to break down even the most challenging poses with ease. Whether you're a beginner or an intermediate artist, my tailored approach will help you <strong>level up fast</strong>.
       </>
     ),
     bulletPoints: [
-      <>Learn <strong>three powerful methods</strong> to break down even the most difficult poses</>,
+      "Learn three powerful methods to break down even the most difficult poses",
       "Draw figures that feel natural and full of energy",
       "Boost your skills with personalized, one-on-one guidance"
     ],
@@ -32,13 +32,17 @@ const services = [
     skillLevel: "Beginner/Intermediate",
     languages: ["English/Russian"],
     meetingType: ["In Person/Zoom"],
-    formUrl: "https://forms.google.com/gesture-drawing-form",
+    formUrl: "https://forms.gle/ZouL3jincXKjKAu26",
     gallery: [gesture1, gesture2, gesture3, gesture4]
   },
   {
     id: 2,
     title: "Anatomy For Artist",
-    description: "Learn the fundamentals of anatomy, from construction techniques and proportions to sculpting the body with precision. Discover how to break down complex shapes, capture natural poses, and tweak anatomy to fit your unique art style.",
+    description:(
+     <>
+        Learn the <strong>fundamentals of anatomy</strong>, from construction techniques and proportions to sculpting the body with precision. Discover how to <strong>break down complex shapes, capture natural poses, and tweak anatomy</strong> to fit your unique art style.
+     </>
+    ),
     bulletPoints: [
       "Sculpt and stylize anatomy to fit your unique art style",
       "Nail proportions and structure with ease",
@@ -48,13 +52,17 @@ const services = [
     skillLevel: "Beginner/Intermediate",
     languages: ["English/Russian"],
     meetingType: ["In Person/Zoom"],
-    formUrl: "https://forms.google.com/anatomy-form",
+    formUrl: "https://forms.gle/ZouL3jincXKjKAu26",
     gallery: [anatomy1, anatomy2, anatomy3, anatomy4]
   },
   {
     id: 3,
     title: "Character Design Course",
-    description: "Dive into the world of character design and learn how to create expressive, unforgettable characters. This course covers composition, stylization, and essential design principles to help you bring your ideas to life. Perfect for beginners and intermediate artists!",
+    description: (
+      <>
+        Dive into the world of character design and learn how to <strong>create expressive, unforgettable characters</strong>. This course covers <strong>composition, stylization, and essential design principles</strong> to help you bring your ideas to life. Perfect for beginners and intermediate artists!
+      </>
+    ),
     bulletPoints: [
       "Master visual storytelling and bring your ideas to life",
       "Design compelling characters, environments, and props with confidence",
@@ -64,7 +72,7 @@ const services = [
     skillLevel: "Beginner/Intermediate",
     languages: ["English/Russian"],
     meetingType: ["In Person/Zoom"],
-    formUrl: "https://forms.google.com/character-design-form",
+    formUrl: "https://forms.gle/ZouL3jincXKjKAu26",
     gallery: [conecptart1, conecptart2, conecptart3, conecptart4]
   }
 ]

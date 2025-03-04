@@ -1,15 +1,25 @@
 import { ArrowRight } from 'lucide-react'
 import consultationImg from '../img/FreeConsultation.jpg'
+import Logo from './Logo'
+import logoImage from '../img/Logo.jpg'
 
 const Hero = () => {
   const handleConsultation = () => {
-    window.open('https://forms.google.com/your-consultation-form', '_blank')
+    window.open('https://forms.gle/5ToKs3sGUsCGN8Q16', '_blank')
   }
 
   return (
     <div className="relative bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="text-center">
+          {/* Logo placement above the title */}
+          <div className="mb-4 flex justify-center">
+            <Logo 
+              size={100} 
+              customLogoPath={logoImage}
+            />
+          </div>
+          
           <h1 className="text-5xl font-bold text-gray-900 mb-4">
             KARA LESSONS
           </h1>
