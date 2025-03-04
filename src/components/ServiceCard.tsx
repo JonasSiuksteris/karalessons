@@ -1,11 +1,12 @@
 import { useState, ReactNode, useEffect } from 'react'
 import { ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react'
 import Lightbox from './Lightbox'
+import { useLanguage } from '../contexts/LanguageContext'
 
 interface ServiceCardProps {
   title: string
-  description: ReactNode
-  bulletPoints: ReactNode[]
+  description: string | ReactNode
+  bulletPoints: string[] | ReactNode[]
   price: number
   skillLevel: string
   languages: string[]
@@ -25,6 +26,7 @@ const ServiceCard = ({
   formUrl, 
   gallery 
 }: ServiceCardProps) => {
+  const { t } = useLanguage()
   const [currentImage, setCurrentImage] = useState(0)
   const [, setLoadedImages] = useState<string[]>([])
   const [isLoading, setIsLoading] = useState(true)
@@ -102,7 +104,7 @@ const ServiceCard = ({
               {/* Overlay to indicate clickability */}
               <div className="absolute inset-0 bg-black/0 hover:bg-black/20 transition-colors flex items-center justify-center">
                 <div className="bg-white/80 rounded-full p-2 opacity-0 hover:opacity-100 transition-opacity">
-                  <span className="text-sm font-medium">View larger</span>
+                  <span className="text-sm font-medium">{t('services.common.viewLarger')}</span>
                 </div>
               </div>
             </>
@@ -146,7 +148,7 @@ const ServiceCard = ({
           <p className="text-gray-600 mb-4">{description}</p>
           
           <ul className="mb-4 text-gray-600 space-y-2">
-            {bulletPoints.map((point, index) => (
+            {Array.isArray(bulletPoints) && bulletPoints.map((point, index) => (
               <li key={index} className="flex items-start">
                 <span className="text-blue-600 mr-2 text-lg">✪</span>
                 <span className='text-sm'>{point}</span>
@@ -160,7 +162,7 @@ const ServiceCard = ({
               onClick={handleBookNow}
               className="bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-blue-700 transition-colors"
             >
-              Book Now
+              {t('services.common.bookNow')}
               <ExternalLink size={18} />
             </button>
           </div>

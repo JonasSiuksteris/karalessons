@@ -1,4 +1,5 @@
 import ServiceCard from './ServiceCard'
+import { useLanguage } from '../contexts/LanguageContext'
 
 // Import all images
 import gesture1 from '../img/Gesture/Gesture1.jpg'
@@ -14,74 +15,64 @@ import conecptart2 from '../img/ConceptArt/ConceptArt2.jpg'
 import conecptart3 from '../img/ConceptArt/ConceptArt3.jpg'
 import conecptart4 from '../img/ConceptArt/ConceptArt4.jpg'
 
-const services = [
-  {
-    id: 1,
-    title: "Gesture Drawing Course",
-    description: (
-      <>
-        In this course, you'll learn <strong>three powerful methods</strong> to break down even the most challenging poses with ease. Whether you're a beginner or an intermediate artist, my tailored approach will help you <strong>level up fast</strong>.
-      </>
-    ),
-    bulletPoints: [
-      "Learn three powerful methods to break down even the most difficult poses",
-      "Draw figures that feel natural and full of energy",
-      "Boost your skills with personalized, one-on-one guidance"
-    ],
-    price: 30,
-    skillLevel: "Beginner/Intermediate",
-    languages: ["English/Russian"],
-    meetingType: ["In Person/Zoom"],
-    formUrl: "https://forms.gle/ZouL3jincXKjKAu26",
-    gallery: [gesture1, gesture2, gesture3, gesture4]
-  },
-  {
-    id: 2,
-    title: "Anatomy For Artist",
-    description:(
-     <>
-        Learn the <strong>fundamentals of anatomy</strong>, from construction techniques and proportions to sculpting the body with precision. Discover how to <strong>break down complex shapes, capture natural poses, and tweak anatomy</strong> to fit your unique art style.
-     </>
-    ),
-    bulletPoints: [
-      "Sculpt and stylize anatomy to fit your unique art style",
-      "Nail proportions and structure with ease",
-      "Break down complex shapes for more fluid poses"
-    ],
-    price: 30,
-    skillLevel: "Beginner/Intermediate",
-    languages: ["English/Russian"],
-    meetingType: ["In Person/Zoom"],
-    formUrl: "https://forms.gle/ZouL3jincXKjKAu26",
-    gallery: [anatomy1, anatomy2, anatomy3, anatomy4]
-  },
-  {
-    id: 3,
-    title: "Character Design Course",
-    description: (
-      <>
-        Dive into the world of character design and learn how to create expressive, unforgettable characters. This course covers <strong>composition, stylization, and essential design principles</strong> to help you bring your ideas to life. Perfect for beginners and intermediate artists!
-      </>
-    ),
-    bulletPoints: [
-      "Master visual storytelling and bring your ideas to life",
-      "Design compelling characters, environments, and props with confidence",
-      "Develop a unique artistic voice through personalized, one-on-one guidance"
-    ],
-    price: 30,
-    skillLevel: "Beginner/Intermediate",
-    languages: ["English/Russian"],
-    meetingType: ["In Person/Zoom"],
-    formUrl: "https://forms.gle/ZouL3jincXKjKAu26",
-    gallery: [conecptart1, conecptart2, conecptart3, conecptart4]
-  }
-]
-
 const Services = () => {
+  const { t } = useLanguage();
+
+  const services = [
+    {
+      id: 1,
+      title: t('services.gestureDrawing.title'),
+      description: (
+        <>
+          {t('services.gestureDrawing.description')}
+        </>
+      ),
+      bulletPoints: t('services.gestureDrawing.bulletPoints') as string[],
+      price: 30,
+      skillLevel: t('services.common.skillLevel'),
+      languages: [t('services.common.languages')],
+      meetingType: [t('services.common.meetingType')],
+      formUrl: "https://forms.gle/ZouL3jincXKjKAu26",
+      gallery: [gesture1, gesture2, gesture3, gesture4]
+    },
+    {
+      id: 2,
+      title: t('services.anatomy.title'),
+      description:(
+      <>
+          {t('services.anatomy.description')}
+      </>
+      ),
+      bulletPoints: t('services.anatomy.bulletPoints') as string[],
+      price: 30,
+      skillLevel: t('services.common.skillLevel'),
+      languages: [t('services.common.languages')],
+      meetingType: [t('services.common.meetingType')],
+      formUrl: "https://forms.gle/ZouL3jincXKjKAu26",
+      gallery: [anatomy1, anatomy2, anatomy3, anatomy4]
+    },
+    {
+      id: 3,
+      title: t('services.characterDesign.title'),
+      description: (
+        <>
+          {t('services.characterDesign.description')}
+        </>
+      ),
+      bulletPoints: t('services.characterDesign.bulletPoints') as string[],
+      price: 30,
+      skillLevel: t('services.common.skillLevel'),
+      languages: [t('services.common.languages')],
+      meetingType: [t('services.common.meetingType')],
+      formUrl: "https://forms.gle/ZouL3jincXKjKAu26",
+      gallery: [conecptart1, conecptart2, conecptart3, conecptart4]
+    }
+  ];
+
   return (
     <div className="bg-white py-6">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-bold text-center mb-8">Our Services</h2>
+        <h2 className="text-4xl font-bold text-center mb-8">{t('services.title')}</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map(service => (
             <ServiceCard key={service.id} {...service} />

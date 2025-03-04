@@ -1,12 +1,15 @@
 import { Instagram, Youtube } from 'lucide-react'
+import { useLanguage } from '../contexts/LanguageContext'
 
 const Footer = () => {
+  const { t } = useLanguage()
+  
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
-            <h3 className="text-xl font-bold mb-4">Follow Us</h3>
+            <h3 className="text-xl font-bold mb-4">{t('footer.followUs')}</h3>
             <div className="flex flex-col space-y-4">
               <a 
                 href="https://www.instagram.com/karaburanstudio?igsh=eXd5YnB0b29rMTB1" 
@@ -29,11 +32,11 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <h3 className="text-xl font-bold mb-4">Contact</h3>
+            <h3 className="text-xl font-bold mb-4">{t('footer.contact')}</h3>
             <p className="text-gray-400">Email: karaburanstudio@gmail.com</p>
           </div>
           <div>
-            <h3 className="text-xl font-bold mb-4">Location</h3>
+            <h3 className="text-xl font-bold mb-4">{t('footer.location')}</h3>
             <p className="text-gray-400">
               Vilnius<br />
               Lithuania
@@ -41,7 +44,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} KARA LESSONS. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} KARA LESSONS. {t('footer.rights')}</p>
         </div>
       </div>
     </footer>
