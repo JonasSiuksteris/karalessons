@@ -143,13 +143,13 @@ const ServiceCard = ({
             ))}
           </div>
           
-          <p className="text-gray-600 mb-6 text-lg">{description}</p>
+          <p className="text-gray-600 mb-4">{description}</p>
           
           <ul className="mb-4 text-gray-600 space-y-2">
             {bulletPoints.map((point, index) => (
               <li key={index} className="flex items-start">
                 <span className="text-blue-600 mr-2 text-lg">✪</span>
-                <span>{point}</span>
+                <span className='text-sm'>{point}</span>
               </li>
             ))}
           </ul>
