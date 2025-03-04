@@ -47,7 +47,6 @@ const LanguageSelector = () => {
         aria-expanded={isOpen}
         aria-haspopup="true"
       >
-        <Globe size={20} className="mr-1" />
         <span className="mr-1">{flagEmojis[language]}</span>
         <span>{languageNames[language]}</span>
       </button>
