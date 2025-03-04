@@ -1,4 +1,4 @@
-import { useState, ReactNode } from 'react'
+import { useState, ReactNode, useEffect } from 'react'
 import { ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react'
 
 interface ServiceCardProps {
@@ -25,6 +25,40 @@ const ServiceCard = ({
   gallery 
 }: ServiceCardProps) => {
   const [currentImage, setCurrentImage] = useState(0)
+  const [loadedImages, setLoadedImages] = useState<string[]>([])
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    // Preload all images
+    const preloadImages = async () => {
+      const loadImage = (src: string): Promise<string> => {
+        return new Promise((resolve, reject) => {
+          const img = new Image()
+          img.src = src
+          img.onload = () => resolve(src)
+          img.onerror = reject
+        })
+      }
+
+      try {
+        // Load first image immediately
+        await loadImage(gallery[0])
+        setLoadedImages([gallery[0]])
+        setIsLoading(false)
+
+        // Load the rest in the background
+        const restOfImages = await Promise.all(
+          gallery.slice(1).map(src => loadImage(src))
+        )
+        setLoadedImages([gallery[0], ...restOfImages])
+      } catch (error) {
+        console.error('Error loading images:', error)
+        setIsLoading(false)
+      }
+    }
+
+    preloadImages()
+  }, [gallery])
 
   const nextImage = () => {
     setCurrentImage((prev) => (prev + 1) % gallery.length)
@@ -41,20 +75,28 @@ const ServiceCard = ({
   return (
     <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
       <div className="relative h-48">
-        <img
-          src={gallery[currentImage]}
-          alt={title}
-          className="w-full h-full object-cover"
-        />
+        {isLoading ? (
+          <div className="w-full h-full flex items-center justify-center bg-gray-100">
+            <div className="animate-pulse bg-gray-200 w-full h-full"></div>
+          </div>
+        ) : (
+          <img
+            src={gallery[currentImage]}
+            alt={`${title} - Image ${currentImage + 1}`}
+            className="w-full h-full object-cover"
+          />
+        )}
         <button
           onClick={prevImage}
           className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 p-1 rounded-full"
+          disabled={isLoading}
         >
           <ChevronLeft size={20} />
         </button>
         <button
           onClick={nextImage}
           className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 p-1 rounded-full"
+          disabled={isLoading}
         >
           <ChevronRight size={20} />
         </button>

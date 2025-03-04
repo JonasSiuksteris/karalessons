@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react'
+import consultationImg from '../img/FreeConsultation.jpg'
 
 const Hero = () => {
   const handleConsultation = () => {
@@ -18,10 +19,11 @@ const Hero = () => {
           <div className="bg-white rounded-lg shadow-sm max-w-4xl mx-auto overflow-hidden">
             <div className="flex flex-row items-center p-4 gap-4">
               <div className="w-20 h-20 sm:w-36 sm:h-36 flex-shrink-0">
-                <img 
-                  src="src\img\FreeConsultation.jpg" 
-                  alt="Art consultation" 
+              <img
+                  src={consultationImg}
+                  alt="Art consultation"
                   className="w-full h-full object-cover rounded-lg"
+                  loading="eager" // This image is above the fold, so we want it to load immediately
                 />
               </div>
               <div className="flex-1">
