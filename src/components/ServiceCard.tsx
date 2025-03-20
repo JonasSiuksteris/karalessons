@@ -88,7 +88,7 @@ const ServiceCard = ({
 
   return (
     <>
-      <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+      <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col h-full">
         <div className="relative h-48 cursor-pointer" onClick={openLightbox}>
           {isLoading ? (
             <div className="w-full h-full flex items-center justify-center bg-gray-100">
@@ -125,7 +125,7 @@ const ServiceCard = ({
           </button>
         </div>
         
-        <div className="p-6">
+        <div className="p-6 flex flex-col flex-1">
           <div className="flex flex-wrap gap-2 mb-4">
             <h3 className="text-xl font-semibold w-full">{title}</h3>
             <span className="bg-zinc-200 text-zinc-600 text-sm font-medium px-3 py-1 rounded">
@@ -145,18 +145,20 @@ const ServiceCard = ({
             ))}
           </div>
           
-          <p className="text-gray-600 mb-4">{description}</p>
+          <div className="flex-1 flex flex-col">
+            <p className="text-gray-600 mb-4">{description}</p>
+            
+            <ul className="mb-4 text-gray-600 space-y-2">
+              {Array.isArray(bulletPoints) && bulletPoints.map((point, index) => (
+                <li key={index} className="flex items-start">
+                  <span className="text-black mr-2 text-lg">✔</span>
+                  <span className='text-sm'>{point}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
           
-          <ul className="mb-4 text-gray-600 space-y-2">
-            {Array.isArray(bulletPoints) && bulletPoints.map((point, index) => (
-              <li key={index} className="flex items-start">
-                <span className="text-black mr-2 text-lg">✔</span>
-                <span className='text-sm'>{point}</span>
-              </li>
-            ))}
-          </ul>
-          
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center mt-auto pt-4 border-t border-gray-100">
             <span className="text-2xl font-bold">{price} €</span>
             <button
               onClick={handleBookNow}
