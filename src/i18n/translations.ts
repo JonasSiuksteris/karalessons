@@ -66,10 +66,10 @@ export const translations = {
       bookConsultation: 'Registruotis nemokamai konsultacijai'
     },
     services: {
-      title: 'Mūsų paslaugos',
+      title: 'MŪSŲ PASLAUGOS',
       gestureDrawing: {
         title: 'Gestų piešimas',
-        description: 'Šiame kurse išmoksite tris efektyvius metodus, padėsiančius lengvai analizuoti net sudėtingiausias pozas. Nesvarbu, ar esate pradedantysis, ar pažengęs menininkas – mano pritaikytas mokymo būdas leis jums greitai tobulėti.',
+        description: 'Šiame kurse išmoksite tris efektyvius metodus padėsiančius lengvai analizuoti net sudėtingiausias pozas. Nesvarbu, ar esate pradedantysis, ar pažengęs menininkas – mano pritaikytas mokymo būdas leis jums greitai tobulėti.',
         bulletPoints: [
           'Įvaldykite tris metodus, kurie padės analizuoti sudėtingas pozas',
           'Išmokite piešti natūraliai atrodančias ir dinamiškas figūras',
@@ -122,7 +122,7 @@ export const translations = {
       bookConsultation: 'Забронировать бесплатную консультацию'
     },
     services: {
-      title: 'Наши услуги',
+      title: 'НАШИ УСЛУГИ',
       gestureDrawing: {
         title: 'Курс рисования жестов',
         description: 'На этом курсе Вы освоите три простых и эффективных метода, которые помогут Вам рисовать даже самые сложные позы. Неважно, новичок вы или профессионал — благодаря индивидуальному подходу Вы быстро улучшите свои навыки!',
@@ -134,7 +134,7 @@ export const translations = {
       },
       anatomy: {
         title: 'Анатомия для художников',
-        description: 'Этот курс поможет вам разобраться в основах анатомии: от пропорций и построения фигуры до детальной пророботки тела. Вы научитесь упрощать сложные формы и освоите пластический анализ фигуры как женской, так и мужской.',
+        description: 'Этот курс поможет вам разобраться в основах анатомии: от пропорций и построения фигуры до детальной прорaботки тела. Вы научитесь упрощать сложные формы и освоите пластический анализ фигуры как женской, так и мужской.',
         bulletPoints: [
           'Вы освоите анатомию и сможете адаптировать ее под свой уникальный стиль рисования',
           'Научитесь легко находить правильные пропорции',
