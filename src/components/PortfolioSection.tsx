@@ -16,7 +16,7 @@ const PortfolioSection = () => {
             href="https://tinatininq.wixsite.com/tinatin"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-lg transition-colors shadow-sm text-lg"
+            className="inline-flex items-center gap-2 bg-yellow-300 hover:bg-yellow-400 text-black font-medium py-3 px-8 rounded-lg transition-colors shadow-sm text-lg"
           >
             <span>{t('portfolio.viewPortfolio')}</span>
             <ExternalLink size={20} />

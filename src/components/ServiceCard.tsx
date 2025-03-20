@@ -128,18 +128,18 @@ const ServiceCard = ({
         <div className="p-6">
           <div className="flex flex-wrap gap-2 mb-4">
             <h3 className="text-xl font-semibold w-full">{title}</h3>
-            <span className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded">
+            <span className="bg-zinc-200 text-zinc-600 text-sm font-medium px-3 py-1 rounded">
               {skillLevel}
             </span>
             
             {languages.map((language, index) => (
-              <span key={index} className="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded">
+              <span key={index} className="bg-zinc-200 text-zinc-600 text-sm font-medium px-3 py-1 rounded">
                 {language}
               </span>
             ))}
             
             {meetingType.map((type, index) => (
-              <span key={index} className="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded">
+              <span key={index} className="bg-zinc-200 text-zinc-600 text-sm font-medium px-3 py-1 rounded">
                 {type}
               </span>
             ))}
@@ -150,7 +150,7 @@ const ServiceCard = ({
           <ul className="mb-4 text-gray-600 space-y-2">
             {Array.isArray(bulletPoints) && bulletPoints.map((point, index) => (
               <li key={index} className="flex items-start">
-                <span className="text-blue-600 mr-2 text-lg">✪</span>
+                <span className="text-black mr-2 text-lg">✔</span>
                 <span className='text-sm'>{point}</span>
               </li>
             ))}
@@ -160,7 +160,7 @@ const ServiceCard = ({
             <span className="text-2xl font-bold">{price} €</span>
             <button
               onClick={handleBookNow}
-              className="bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-blue-700 transition-colors"
+              className="bg-yellow-300 text-black px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-yellow-400 transition-colors"
             >
               {t('services.common.bookNow')}
               <ExternalLink size={18} />

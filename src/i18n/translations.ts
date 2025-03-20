@@ -10,7 +10,7 @@ export const translations = {
       bookConsultation: 'Book Free Consultation'
     },
     services: {
-      title: 'Our Services',
+      title: 'OUR SERVICES',
       gestureDrawing: {
         title: 'Gesture Drawing Course',
         description: 'In this course, you\'ll learn three powerful methods to break down even the most challenging poses with ease. Whether you\'re a beginner or an intermediate artist, my tailored approach will help you level up fast.',
