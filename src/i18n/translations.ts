@@ -98,7 +98,7 @@ export const translations = {
         skillLevel: 'Pradedantiesiems / Pažengusiems',
         languages: 'Anglų / Rusų',
         meetingType: 'Gyvai / per Zoom',
-        bookNow: 'Užsisakyti dabar',
+        bookNow: 'Užsisakyti',
         viewLarger: 'Peržiūrėti didesnį vaizdą'
       }
     },
@@ -154,7 +154,7 @@ export const translations = {
         skillLevel: 'Начинающий/Средний',
         languages: 'Английский/Русский',
         meetingType: 'Лично/Zoom',
-        bookNow: 'Заказать сейчас',
+        bookNow: 'Забронировать',
         viewLarger: 'Увеличить'
       }
     },
