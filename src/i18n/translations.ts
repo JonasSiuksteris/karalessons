@@ -30,8 +30,8 @@ export const translations = {
         ]
       },
       characterDesign: {
-        title: 'Character Design Course',
-        description: 'Dive into the world of character design and learn how to create expressive, unforgettable characters. This course covers composition, stylization, and essential design principles to help you bring your ideas to life. Perfect for beginners and intermediate artists!',
+        title: 'Concept Art',
+        description: 'Dive into the world of concept art and learn how to create expressive, unforgettable characters. This course covers composition, stylization, and essential design principles to help you bring your ideas to life. Perfect for beginners and intermediate artists!',
         bulletPoints: [
           'Master visual storytelling and bring your ideas to life',
           'Design compelling characters, environments, and props with confidence',
