@@ -16,7 +16,15 @@ import conecptart3 from '../img/ConceptArt/ConceptArt3.jpg'
 import conecptart4 from '../img/ConceptArt/ConceptArt4.jpg'
 
 const Services = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+
+  // Define form URLs by language
+  const getFormUrl = () => {
+    if (language === 'ru') {
+      return "https://forms.gle/7SFsfz1UK2ecrBLTA";
+    }
+    return "https://forms.gle/ZouL3jincXKjKAu26"; // Default for 'en' and 'lt'
+  };
 
   const services = [
     {
@@ -32,7 +40,7 @@ const Services = () => {
       skillLevel: t('services.common.skillLevel'),
       languages: [t('services.common.languages')],
       meetingType: [t('services.common.meetingType')],
-      formUrl: "https://forms.gle/ZouL3jincXKjKAu26",
+      formUrl: getFormUrl(),
       gallery: [gesture1, gesture2, gesture3, gesture4]
     },
     {
@@ -48,7 +56,7 @@ const Services = () => {
       skillLevel: t('services.common.skillLevel'),
       languages: [t('services.common.languages')],
       meetingType: [t('services.common.meetingType')],
-      formUrl: "https://forms.gle/ZouL3jincXKjKAu26",
+      formUrl: getFormUrl(),
       gallery: [anatomy1, anatomy2, anatomy3, anatomy4]
     },
     {
@@ -64,7 +72,7 @@ const Services = () => {
       skillLevel: t('services.common.skillLevel'),
       languages: [t('services.common.languages')],
       meetingType: [t('services.common.meetingType')],
-      formUrl: "https://forms.gle/ZouL3jincXKjKAu26",
+      formUrl: getFormUrl(),
       gallery: [conecptart1, conecptart2, conecptart3, conecptart4]
     }
   ];

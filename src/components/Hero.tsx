@@ -3,10 +3,17 @@ import consultationImg from '../img/FreeConsultation.jpg'
 import { useLanguage } from '../contexts/LanguageContext'
 
 const Hero = () => {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
   
   const handleConsultation = () => {
-    window.open('https://forms.gle/5ToKs3sGUsCGN8Q16', '_blank')
+    // Different URLs based on language
+    const formUrls = {
+      en: 'https://forms.gle/5ToKs3sGUsCGN8Q16',
+      lt: 'https://forms.gle/5ToKs3sGUsCGN8Q16',
+      ru: 'https://forms.gle/uZURVYmVU3M2Xjwc7'
+    }
+    
+    window.open(formUrls[language], '_blank')
   }
 
   return (
